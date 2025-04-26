@@ -1,0 +1,23 @@
+.vscode
+### .gitignore
+
+```gitignore
+# Compiled class files
+*.class
+bin/
+out/
+
+# IDE specific files
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# Build directories
+target/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
