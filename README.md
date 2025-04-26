@@ -28,7 +28,9 @@ This Java project implements a maximum flow algorithm (Ford-Fulkerson) for analy
 2 3 5   # Edge from 2→3 with capacity 5
 ```
 
+## File structure
 
+```text
 network-flow/
 ├── src/
 │   ├── FlowEdge.java       # Pipe/edge implementation
@@ -39,6 +41,7 @@ network-flow/
 │   └── test_input.txt     # Sample input
 ├── .gitignore
 └── README.md
+```
 
 ## Requirements
 
