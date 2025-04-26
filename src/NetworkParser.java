@@ -13,21 +13,36 @@ public class NetworkParser {
      * @throws IOException If file can't be read
      */
     public static FlowNetwork readNetwork(String filename) throws IOException {
+        System.out.println("╔════════════════════════════════╗");
+        System.out.println("║   Reading Network Input File   ║");
+        System.out.println("╚════════════════════════════════╝");
+        System.out.println("Loading file: " + filename);
+        
         Scanner scanner = new Scanner(new File(filename));
-        
-        // First line = number of junctions
         int nodes = scanner.nextInt();
-        FlowNetwork system = new FlowNetwork(nodes);
+        System.out.println("• Found " + nodes + " junctions (nodes)");
         
-        // Each following line = one pipe
+        FlowNetwork system = new FlowNetwork(nodes);
+        int edgeCount = 0;
+        
+        System.out.println("\n Pipe Connections:");
+        System.out.println("┌──────┬──────┬──────────┐");
+        System.out.println("│ From │ To   │ Capacity │");
+        System.out.println("├──────┼──────┼──────────┤");
+        
         while (scanner.hasNextInt()) {
             int from = scanner.nextInt();
             int to = scanner.nextInt();
             int capacity = scanner.nextInt();
             system.addPipe(new FlowEdge(from, to, capacity));
+            System.out.printf("│ %4d │ %4d │ %8d │\n", from, to, capacity);
+            edgeCount++;
         }
         
+        System.out.println("└──────┴──────┴──────────┘");
+        System.out.println("• Total pipes loaded: " + edgeCount);
         scanner.close();
+        
         return system;
     }
 }
