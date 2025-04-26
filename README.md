@@ -18,7 +18,7 @@ This Java project implements a maximum flow algorithm (Ford-Fulkerson) for analy
    java -cp src NetworkFlow path/to/input_file.txt
 ```
 
-E### Example Input Format
+## Example Input Format
 ```text
 4       # Number of nodes (0-3)
 0 1 6   # Edge from 0→1 with capacity 6
@@ -28,7 +28,9 @@ E### Example Input Format
 2 3 5   # Edge from 2→3 with capacity 5
 ```
 
+## File structure
 
+```text
 network-flow/
 ├── src/
 │   ├── FlowEdge.java       # Pipe/edge implementation
@@ -39,6 +41,7 @@ network-flow/
 │   └── test_input.txt     # Sample input
 ├── .gitignore
 └── README.md
+```
 
 ## Requirements
 
