@@ -18,14 +18,15 @@ This Java project implements a maximum flow algorithm (Ford-Fulkerson) for analy
    java -cp src NetworkFlow path/to/input_file.txt
 ```
 
-Example input file format:
-
+## Example Input Format
+```text
 4       # Number of nodes (0-3)
 0 1 6   # Edge from 0→1 with capacity 6
 0 2 4   # Edge from 0→2 with capacity 4
 1 2 2   # Edge from 1→2 with capacity 2
 1 3 3   # Edge from 1→3 with capacity 3
 2 3 5   # Edge from 2→3 with capacity 5
+```
 
 
 network-flow/
