@@ -21,7 +21,7 @@ public class NetworkFlow {
             FlowNetwork system = NetworkParser.readNetwork(args[0]);
             
             System.out.println("\n╔════════════════════════════════╗");
-            System.out.println("║        Network Summary        ║");
+            System.out.println("║        Network Summary         ║");
             System.out.println("╚════════════════════════════════╝");
             System.out.printf(" %-20s: %d\n", "Total Junctions", system.nodeCount());
             System.out.printf(" %-20s: %d\n", "Total Pipes", system.pipeCount());
@@ -38,7 +38,7 @@ public class NetworkFlow {
             FordFulkerson calculator = new FordFulkerson(system, source, sink);
             
             System.out.println("\n╔════════════════════════════════╗");
-            System.out.println("║         Final Results         ║");
+            System.out.println("║         Final Results          ║");
             System.out.println("╚════════════════════════════════╝");
             System.out.printf(" Maximum Flow: %d\n", calculator.maxFlow());
             
@@ -52,7 +52,7 @@ public class NetworkFlow {
     
     private static void printPipeStatus(FlowNetwork system) {
         System.out.println("┌──────┬──────┬──────────┬────────────┐");
-        System.out.println("│ From │ To   │ Capacity │ Flow       │");
+        System.out.println("│ From │  To  │ Capacity │    Flow    │");
         System.out.println("├──────┼──────┼──────────┼────────────┤");
         for (FlowEdge pipe : system.allPipes()) {
             System.out.printf("│ %4d │ %4d │ %8d │ %4d/%-5d │\n",
